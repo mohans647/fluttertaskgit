@@ -10,10 +10,10 @@ class GitHubApiService {
       {int page = 1,String sort = 'desc', String? labels}) async {
     try {
       _dio.options.headers = {
-        'Authorization': 'Bearer ${Secrets.Githup_APIKey}',
+        'Authorization': 'Bearer ${Base_Url_key.Githup_APIKey}',
       };
       final response = await _dio.get(
-        '${Secrets.Base_apiUrl}$repo/issues',
+        '${Base_Url_key.Base_apiUrl}$repo/issues',
         queryParameters: {
           'state': state,
           'sort': 'created',
