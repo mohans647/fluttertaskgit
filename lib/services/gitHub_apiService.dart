@@ -12,6 +12,7 @@ class GitHubApiService {
       _dio.options.headers = {
         'Authorization': 'Bearer ${Base_Url.Githup_API}',
       };
+
       final response = await _dio.get(
         '${Base_Url.Base_apiUrl}$repo/issues',
         queryParameters: {
